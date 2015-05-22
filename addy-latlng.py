@@ -6,7 +6,7 @@ def get_latlng(csv_path):
 	with open(csv_path, 'rU') as csv_input:
 		#strip out directory, if it exists
 		loc = re.sub(r'(^.*\/)','',csv_path)
-		with open(loc+"_latlng",'w') as csv_output:
+		with open("_latlng"+loc,'w') as csv_output:
 			writer = csv.writer(csv_output)
 			reader = csv.reader(csv_input)
 
